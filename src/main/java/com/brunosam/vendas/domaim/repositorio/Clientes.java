@@ -10,5 +10,10 @@ public interface Clientes extends JpaRepository<Cliente, Integer> {
 
     List<Cliente> findByNomeLike(String nome);
 
+    List<Cliente> findByNomeOrIdOrderById(String nome, Integer id);
 
+    boolean existsByNome(String nome);
+
+
+    List<Cliente> findAllByOrderByNomeDesc();
 }
